@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:snake_game/screens/homepage.dart';
 
 class GamePage extends StatefulWidget {
@@ -116,7 +117,7 @@ class _GamePageState extends State<GamePage> {
                   child: Text('Play Again',
                       style: TextStyle(
                           color: Colors.white,
-                          fontSize: 18,
+                          fontSize: 18.sp,
                           fontWeight: FontWeight.w500))),
             ],
           );
@@ -129,7 +130,7 @@ class _GamePageState extends State<GamePage> {
       body: Column(
         children: [
           Container(
-            height: 605,
+            height: 605.h,
             child: GridView.builder(
                 physics: NeverScrollableScrollPhysics(),
                 itemCount: numberOfsquares,
@@ -139,9 +140,9 @@ class _GamePageState extends State<GamePage> {
                   if (snakePos.contains(index)) {
                     return Center(
                       child: Container(
-                        padding: EdgeInsets.all(2),
+                        padding: EdgeInsets.all(2.h),
                         child: ClipRRect(
-                          borderRadius: BorderRadius.circular(5),
+                          borderRadius: BorderRadius.circular(5.h),
                           child: Container(
                             color: Colors.white,
                           ),
@@ -151,9 +152,9 @@ class _GamePageState extends State<GamePage> {
                   }
                   if (index == food) {
                     return Container(
-                      padding: EdgeInsets.all(2),
+                      padding: EdgeInsets.all(2.h),
                       child: ClipRRect(
-                        borderRadius: BorderRadius.circular(5),
+                        borderRadius: BorderRadius.circular(5.h),
                         child: Container(
                           color: Colors.green,
                         ),
@@ -161,9 +162,9 @@ class _GamePageState extends State<GamePage> {
                     );
                   } else {
                     return Container(
-                        padding: EdgeInsets.all(2),
+                        padding: EdgeInsets.all(2.h),
                         child: ClipRRect(
-                            borderRadius: BorderRadius.circular(5),
+                            borderRadius: BorderRadius.circular(5.h),
                             child: Container(
                               color: Colors.grey[900],
                             )));
@@ -171,7 +172,7 @@ class _GamePageState extends State<GamePage> {
                 }),
           ),
           Container(
-            height: 215,
+            height: 215.h,
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/images/game_back.png'),
@@ -192,7 +193,7 @@ class _GamePageState extends State<GamePage> {
                     },
                     child: CircleAvatar(
                       backgroundColor: Colors.black,
-                      maxRadius: 30,
+                      maxRadius: 30.h,
                       backgroundImage: AssetImage('assets/images/up.png'),
                     ),
                   ),
@@ -212,7 +213,7 @@ class _GamePageState extends State<GamePage> {
                         },
                         child: CircleAvatar(
                           backgroundColor: Colors.black,
-                          maxRadius: 30,
+                          maxRadius: 30.h,
                           backgroundImage: AssetImage('assets/images/left.png'),
                         ),
                       ),
@@ -229,7 +230,7 @@ class _GamePageState extends State<GamePage> {
                         },
                         child: CircleAvatar(
                           backgroundColor: Colors.black,
-                          maxRadius: 30,
+                          maxRadius: 30.h,
                           backgroundImage:
                               AssetImage('assets/images/right.png'),
                         ),
@@ -241,7 +242,7 @@ class _GamePageState extends State<GamePage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(left: 20, top: 40),
+                      padding: EdgeInsets.only(left: 20.w, top: 40.h),
                       child: RaisedButton(
                         color: Colors.green,
                         onPressed: startGame,
@@ -251,7 +252,7 @@ class _GamePageState extends State<GamePage> {
                             color: Colors.white,
                             fontWeight: FontWeight.w700,
                             fontFamily: 'Roboto',
-                            fontSize: 22,
+                            fontSize: 22.sp,
                           ),
                         ),
                       ),
@@ -267,12 +268,12 @@ class _GamePageState extends State<GamePage> {
                       },
                       child: CircleAvatar(
                         backgroundColor: Colors.black,
-                        maxRadius: 30,
+                        maxRadius: 30.h,
                         backgroundImage: AssetImage('assets/images/down.png'),
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(right: 20, top: 40),
+                      padding: EdgeInsets.only(right: 20.w, top: 40.h),
                       child: RaisedButton(
                         color: Colors.red,
                         onPressed: () {
@@ -281,12 +282,11 @@ class _GamePageState extends State<GamePage> {
                               builder: (_) => AlertDialog(
                                     title: Center(
                                       child: Padding(
-                                        padding:
-                                            const EdgeInsets.only(left: 20),
+                                        padding: EdgeInsets.only(left: 20.w),
                                         child: Text(
                                           'Do you want to exit the game?',
                                           style: TextStyle(
-                                              fontSize: 23,
+                                              fontSize: 23.sp,
                                               fontFamily: 'Roboto'),
                                         ),
                                       ),
@@ -331,7 +331,7 @@ class _GamePageState extends State<GamePage> {
                             color: Colors.white,
                             fontWeight: FontWeight.w700,
                             fontFamily: 'Roboto',
-                            fontSize: 22,
+                            fontSize: 22.sp,
                           ),
                         ),
                       ),

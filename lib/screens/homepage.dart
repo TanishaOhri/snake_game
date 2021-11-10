@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:snake_game/screens/game.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -45,17 +46,17 @@ class _HomePageState extends State<HomePage> {
             child: Column(
               children: [
                 SizedBox(
-                  height: 130,
+                  height: 130.h,
                 ),
                 Container(
                     child: Image.asset(
                   'assets/images/snake.png',
-                  height: 250,
-                  width: 250,
+                  height: 250.h,
+                  width: 250.w,
                   // fit: BoxFit.fill,
                 )),
                 SizedBox(
-                  height: 80,
+                  height: 80.h,
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
@@ -68,14 +69,14 @@ class _HomePageState extends State<HomePage> {
                   },
                   child: CircleAvatar(
                     backgroundColor: Colors.black,
-                    maxRadius: 40,
+                    maxRadius: 40.h,
                     backgroundImage: AssetImage('assets/images/play.png'),
                   ),
                 ),
                 Container(
                   child: Image.asset(
                     'assets/images/playtext.png',
-                    height: 90,
+                    height: 90.h,
                   ),
                 )
               ],
